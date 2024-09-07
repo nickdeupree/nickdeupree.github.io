@@ -19,7 +19,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="mb-12">
-      <h2 className="text-3xl font-bold mb-4">Contact</h2>
+      <h2 className="text-3xl font-bold mb-4 text-gray-800">Contact</h2>
       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6">
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">Name:</label>
