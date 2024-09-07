@@ -6,16 +6,22 @@ export const projects = [
       image: "/placeholder.svg?height=200&width=300"
     },
     {
+      title: "Prompt Masters",
+      github: "https://github.com/nicholasdeupree/PromptMasters",
+      description: "PromptMasters is a multiplayer AI image-generation game where players create images from prompts and vote on the best ones. Compete across several rounds, earning points for each vote. The player with the highest score wins! Built with Node.js and Socket.io for real-time play. Fun, creative, and competitive!",
+      image: "/PromptMasters.png"
+    },
+    {
       title: "Minesweeper for MacOS",
       github: "https://github.com/nicholasdeupree/Minesweeper",
       description: "A classic Minesweeper game reimagined for MacOS, built with Swift and optimized for a smooth user experience.",
-      image: "/placeholder.svg?height=200&width=300"
+      image: "/images/Minesweepa.png"
     },
     {
       title: "YouTube Music & Spotify Converter",
       github: "https://github.com/nicholasdeupree/ytmusic_to_spotify",
       description: "A Python-based tool that converts playlists between YouTube Music and Spotify, making it easy to transfer your favorite music.",
-      image: "/placeholder.svg?height=200&width=300"
+      image: "/MusicConverta.png"
     },
     {
       title: "Personal Finance Tracker",
