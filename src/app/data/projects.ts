@@ -27,7 +27,7 @@ export const projects = [
       title: "Personal Finance Tracker",
       github: "https://github.com/nicholasdeupree/BankAccount",
       description: "A Java application for tracking personal finances, including income, expenses, and savings goals.",
-      image: "/placeholder.svg?height=200&width=300"
+      image: "/BankAccount.png"
     },
     {
       title: "Minecraft Server Plugins",
@@ -39,6 +39,6 @@ export const projects = [
       title: "Steel Mod for Minecraft",
       github: "https://github.com/nicholasdeupree/Minecraft-Mods",
       description: "A Minecraft mod that introduces steel as a new material, along with related crafting recipes and game mechanics.",
-      image: "/placeholder.svg?height=200&width=300"
+      image: "/MinecraftMod.jpg"
     }
   ]
