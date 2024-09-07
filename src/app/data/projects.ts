@@ -15,7 +15,7 @@ export const projects = [
       title: "Minesweeper for MacOS",
       github: "https://github.com/nicholasdeupree/Minesweeper",
       description: "A classic Minesweeper game reimagined for MacOS, built with Swift and optimized for a smooth user experience.",
-      image: "/images/Minesweepa.png"
+      image: "/Minesweepa.png"
     },
     {
       title: "YouTube Music & Spotify Converter",
@@ -33,7 +33,7 @@ export const projects = [
       title: "Minecraft Server Plugins",
       github: "https://github.com/nicholasdeupree/Minecraft-Plugins",
       description: "A collection of custom Minecraft server plugins that add new features and enhance gameplay experiences.",
-      image: "/placeholder.svg?height=200&width=300"
+      image: "/MinecraftPlugins.png"
     },
     {
       title: "Steel Mod for Minecraft",
