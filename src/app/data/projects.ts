@@ -3,7 +3,7 @@ export const projects = [
       title: "CS2 Inventory Builder",
       github: "https://github.com/nicholasdeupree/csgo-inventory-builder",
       description: "A tool for creating and managing Counter-Strike 2 inventories, allowing users to experiment with different weapon skin combinations.",
-      image: "/placeholder.svg?height=200&width=300"
+      image: "/InvBuilda.png"
     },
     {
       title: "Prompt Masters",
