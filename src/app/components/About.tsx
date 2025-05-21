@@ -7,8 +7,8 @@ export default function About() {
     <section id="about" className="mb-12">
       <h2 className="text-3xl font-bold mb-4 text-gray-800">About Me</h2>
       <div className="bg-white shadow-md rounded-lg p-6">
-        <p className="mb-4 text-gray-700">Hello! I&apos;m Nick Deupree &amp; currently a senior at the University of California, Santa Cruz.</p>
-        <p className="mb-4 text-gray-700">I want to work in the tech field as a software engineer and am currently working on personal projects to improve my skills.</p>
+        <p className="mb-4 text-gray-700">Hi, I&apos;m Nick Deupree &amp; I'm a senior at the University of California, Santa Cruz, pursuing a career in software engineering.</p>
+        <p className="mb-4 text-gray-700">I'm passionate about building software that solves real problems, and I'm actively developing personal projects to hone my skills and explore new technologies.</p>
         <p className="mb-4 text-gray-700">When I&apos;m not at the computer I enjoy wilderness camping, basketball, and staying fit.</p>
         <p className="mb-4 text-gray-700">
           Find me at{' '}
