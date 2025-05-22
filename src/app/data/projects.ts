@@ -52,17 +52,17 @@ export const projects = [
       image: "/PyGameArcade.png"
     },
     {
-      title: "CS2 Inventory Builder",
-      github: "https://github.com/nicholasdeupree/csgo-inventory-builder",
-      description: "A tool for creating and managing Counter-Strike 2 inventories, allowing users to experiment with different weapon skin combinations.",
-      image: "/InvBuilda.png"
-    },
-    {
       title: "Prompt Masters",
       github: "https://github.com/nicholasdeupree/PromptMasters",
       link: "https://promptmasters.onrender.com/",
       description: "PromptMasters is a multiplayer AI image-generation game where players create images from prompts and vote on the best ones. Compete across several rounds, earning points for each vote. The player with the highest score wins! Built with Node.js and Socket.io for real-time play. Fun, creative, and competitive!",
       image: "/PromptMasters.png"
+    },
+    {
+      title: "YouTube Music & Spotify Converter",
+      github: "https://github.com/nicholasdeupree/ytmusic_to_spotify",
+      description: "A Python-based tool that converts playlists between YouTube Music and Spotify, making it easy to transfer your favorite music.",
+      image: "/MusicConverta.png"
     },
     {
       title: "Minesweeper for MacOS",
@@ -71,10 +71,10 @@ export const projects = [
       image: "/Minesweepa.png"
     },
     {
-      title: "YouTube Music & Spotify Converter",
-      github: "https://github.com/nicholasdeupree/ytmusic_to_spotify",
-      description: "A Python-based tool that converts playlists between YouTube Music and Spotify, making it easy to transfer your favorite music.",
-      image: "/MusicConverta.png"
+      title: "CS2 Inventory Builder",
+      github: "https://github.com/nicholasdeupree/csgo-inventory-builder",
+      description: "A tool for creating and managing Counter-Strike 2 inventories, allowing users to experiment with different weapon skin combinations.",
+      image: "/InvBuilda.png"
     },
     {
       title: "Personal Finance Tracker",
