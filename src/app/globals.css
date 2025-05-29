@@ -25,3 +25,27 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer base {
+  :root {
+    /* Light mode variables */
+    --color-primary: 37 99 235; /* blue-600 in RGB */
+    --color-secondary: 96 165 250; /* blue-400 in RGB */
+    --color-accent: 191 219 254; /* blue-200 in RGB */
+    --color-background: 255 255 255; /* white in RGB */
+    --color-card: 255 255 255; /* white in RGB */
+    --color-text: 31 41 55; /* gray-800 in RGB */
+    --color-text-muted: 75 85 99; /* gray-700 in RGB */
+  }
+
+  .dark {
+    /* Dark mode variables */
+    --color-primary: 30 58 138; /* blue-900 in RGB */
+    --color-secondary: 31 41 55; /* gray-800 in RGB */
+    --color-accent: 96 165 250; /* blue-400 in RGB */
+    --color-background: 17 24 39; /* gray-900 in RGB */
+    --color-card: 31 41 55; /* gray-800 in RGB */
+    --color-text: 243 244 246; /* gray-100 in RGB */
+    --color-text-muted: 209 213 219; /* gray-300 in RGB */
+  }
+}

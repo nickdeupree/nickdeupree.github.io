@@ -1,5 +1,12 @@
 export const projects = [
     {
+      title: "Audio Tag Editor",
+      github: "https://github.com/nickdeupree/Audio-Tag-Editor/tree/main",
+      download: "https://github.com/nickdeupree/Audio-Tag-Editor/releases/tag/0.1",
+      description: "Audio Tag Editor — A minimal Python tool to update song metadata like title, artist, album, genre, and cover art using Mutagen. Simple UI with Tkinter. Supports MP3, FLAC, OGG, and more. Ideal for handling your local files.",
+      image: "/AudioTagEdita.png"
+    },
+    {
       title: "Erase Trail",
       github: "https://github.com/nickdeupree/EraseTrail",
       link: "https://addons.mozilla.org/en-US/firefox/addon/erasetrail/",
@@ -67,6 +74,7 @@ export const projects = [
     {
       title: "Minesweeper for MacOS",
       github: "https://github.com/nicholasdeupree/Minesweeper",
+      download: "https://github.com/nickdeupree/Minesweeper/releases/tag/Release1.0",
       description: "A classic Minesweeper game reimagined for MacOS, built with Swift and optimized for a smooth user experience.",
       image: "/Minesweepa.png"
     },

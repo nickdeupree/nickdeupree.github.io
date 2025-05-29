@@ -18,21 +18,21 @@ export default function Projects() {
   return (
     <section id="projects" className="mb-12">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-3xl font-bold text-gray-800">Projects</h2>
+        <h2 className="text-3xl font-bold text-text">Projects</h2>
         <div>
-          <label htmlFor="sort" className="mr-2 text-sm text-gray-600">Sort by:</label>
+          <label htmlFor="sort" className="mr-2 text-sm text-text-muted">Sort by:</label>
           <select
             id="sort"
             value={sortOrder}
             onChange={e => setSortOrder(e.target.value as 'newest' | 'oldest')}
-            className="border rounded px-2 py-1 text-sm text-gray-700"
+            className="border rounded px-2 py-1 text-sm text-text-muted "
           >
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
           </select>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-6">
+      <div className="bg-background grid grid-cols-1 gap-6">
         {sortedProjects.map((project, index) => (
           <Project key={index} {...project} />
         ))}
