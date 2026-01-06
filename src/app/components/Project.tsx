@@ -8,7 +8,7 @@ interface ProjectProps {
   link?: string;
   download?: string;
   description: string;
-  image: string;
+  image?: string;
   difficulty: number;
 }
 
