@@ -5,12 +5,6 @@ const nextConfig = {
     images: {
       unoptimized: true,
     },
-    // Enable build caching
-    experimental: {
-      turbotrace: {
-        logLevel: 'error',
-      },
-    },
   };
   
   export default nextConfig;
