@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { Card, CardContent, Typography, Box, Button, Stack, Rating } from '@mui/material'
 
 interface ProjectProps {
   title: string;
@@ -8,43 +9,83 @@ interface ProjectProps {
   download?: string;
   description: string;
   image: string;
+  difficulty: number;
 }
 
-export default function Project({ title, github, link, download, description, image }: ProjectProps) {
+export default function Project({ title, github, link, download, description, image, difficulty }: ProjectProps) {
   return (
-    <div className="bg-card shadow-md rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col md:flex-row">
-      <div className="p-6 flex-1">
-        <Link href={link || github} target="_blank" rel="noopener noreferrer">
-          <h3 className="text-xl font-semibold mb-2 text-text">{title}</h3>
+    <Card 
+      sx={{ 
+        display: 'flex', 
+        flexDirection: { xs: 'column', md: 'row' },
+        transition: 'all 0.3s ease',
+        '&:hover': {
+          boxShadow: 6
+        }
+      }}
+    >
+      <CardContent sx={{ flex: 1, p: 3 }}>
+        <Link href={link || github} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+          <Typography variant="h5" component="h3" sx={{ mb: 1, fontWeight: 'semibold', color: 'text.primary' }}>
+            {title}
+          </Typography>
         </Link>
-        <h4 className="mb-2 text-sm text-text-muted">
+        <Box>
+          <Rating value={difficulty} readOnly max={5} size="small" />
+        </Box>
+        <Stack direction="row" spacing={1} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
           {link && (
-            <>
-                <Link href={link} className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">Visit Site</Link>
-              {' | '}
-            </>
+            <Button 
+              size="small" 
+              component={Link} 
+              href={link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              sx={{ textTransform: 'none' }}
+            >
+              Visit Site
+            </Button>
           )}
           {download && (
-            <>
-              <Link href={download} className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">Download</Link>
-              {' | '}
-            </>
+            <Button 
+              size="small" 
+              component={Link} 
+              href={download} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              sx={{ textTransform: 'none' }}
+            >
+              Download
+            </Button>
           )}
-          <Link href={github} className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">Repo</Link>
-        </h4>
-        <p className="text-text-muted">{description}</p>
-      </div>
-      <div className="w-full md:w-1/3 relative">
-        <Link href={link || github} target="_blank" rel="noopener noreferrer" className="h-full flex items-center justify-center">
-          <Image
-            src={image}
-            alt={`${title} screenshot`}
-            width={300}
-            height={200}
-            className="object-contain max-w-full max-h-64"
-          />
-        </Link>
-      </div>
-    </div>
+          <Button 
+            size="small" 
+            component={Link} 
+            href={github} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            sx={{ textTransform: 'none' }}
+          >
+            Repo
+          </Button>
+        </Stack>
+        <Typography variant="body2" color="text.secondary">
+          {description}
+        </Typography>
+      </CardContent>
+      {image && (
+        <Box sx={{ width: { xs: '100%', md: '33%' }, display: 'flex', alignItems: 'center', justifyContent: 'center', p: 2 }}>
+          <Link href={link || github} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={image}
+              alt={title}
+              width={300}
+              height={200}
+              style={{ objectFit: 'contain', maxWidth: '100%', maxHeight: '200px' }}
+            />
+          </Link>
+        </Box>
+      )}
+    </Card>
   )
 }

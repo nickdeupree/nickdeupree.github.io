@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Typography, Card, CardContent, TextField, Button, Box } from '@mui/material'
 
 export default function Contact() {
   const [name, setName] = useState('')
@@ -18,50 +19,51 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="mb-12">
-      <h2 className="text-3xl font-bold mb-4 text-text">Contact</h2>
-      <form onSubmit={handleSubmit} className="bg-card shadow-md rounded-lg p-6">
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-text text-sm font-bold mb-2">Name:</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            className="bg-shadow appearance-none  rounded w-full py-2 px-3 text-text-muted leading-tight focus:outline-none focus:shadow-outline focus:border-accent focus:border"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-text text-sm font-bold mb-2">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="shadow appearance-none  rounded w-full py-2 px-3 text-text-muted leading-tight focus:outline-none focus:shadow-outline focus:border-accent focus:border"
-          />
-        </div>
-        <div className="mb-6">
-          <label htmlFor="message" className="block text-text text-sm font-bold mb-2">Message:</label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-            className="shadow appearance-none rounded w-full py-2 px-3 text-text-muted leading-tight focus:outline-none focus:shadow-outline focus:border-accent focus:border h-32"
-          />
-        </div>
-        <div className="flex items-center justify-between">
-          <button
-            type="submit"
-            className="bg-primary hover:bg-accent text-text font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Send
-          </button>
-        </div>
-      </form>
-    </section>
+    <Box component="section" id="contact" sx={{ mb: 6 }}>
+      <Typography variant="h3" component="h2" sx={{ mb: 3, fontWeight: 'bold' }}>
+        Contact
+      </Typography>
+      <Card sx={{ boxShadow: 3 }}>
+        <CardContent sx={{ p: 3 }}>
+          <Box component="form" onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+            <TextField
+              label="Name"
+              variant="outlined"
+              fullWidth
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <TextField
+              label="Email"
+              type="email"
+              variant="outlined"
+              fullWidth
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <TextField
+              label="Message"
+              variant="outlined"
+              fullWidth
+              required
+              multiline
+              rows={4}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <Button 
+              type="submit" 
+              variant="contained" 
+              color="primary" 
+              sx={{ alignSelf: 'flex-start', textTransform: 'none' }}
+            >
+              Send
+            </Button>
+          </Box>
+        </CardContent>
+      </Card>
+    </Box>
   )
 }

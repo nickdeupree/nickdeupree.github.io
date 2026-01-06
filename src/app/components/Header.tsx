@@ -1,34 +1,60 @@
+'use client'
+
 import Link from 'next/link'
+import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material'
 import DarkModeToggle from '../widgets/DarkModeToggle';
 
 export default function Header() {
   return (
-    <header className="bg-primary text-text p-4 sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Nick Deupree</h1>
-        <nav>
-          <ul className="flex space-x-4">
-            <li>
-              <Link href="#about" className="hover:underline hover:text-accent">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="#projects" className="hover:underline hover:text-accent">
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link href="#contact" className="hover:underline hover:text-accent">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <DarkModeToggle />
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <AppBar position="sticky" sx={{ backgroundColor: 'primary.main' }}>
+      <Toolbar>
+        <Typography variant="h5" component="h1" sx={{ flexGrow: 1, fontWeight: 'bold' }}>
+          Nick Deupree
+        </Typography>
+        <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+          <Button 
+            color="inherit" 
+            component={Link} 
+            href="#about"
+            sx={{ '&:hover': { textDecoration: 'underline' } }}
+          >
+            About
+          </Button>
+          <Button 
+            color="inherit" 
+            component={Link} 
+            href="#experience"
+            sx={{ '&:hover': { textDecoration: 'underline' } }}
+          >
+            Experience
+          </Button>
+          <Button 
+            color="inherit" 
+            component={Link} 
+            href="#opensource"
+            sx={{ '&:hover': { textDecoration: 'underline' } }}
+          >
+            Open Source
+          </Button>
+          <Button 
+            color="inherit" 
+            component={Link} 
+            href="#projects"
+            sx={{ '&:hover': { textDecoration: 'underline' } }}
+          >
+            Projects
+          </Button>
+          <Button 
+            color="inherit" 
+            component={Link} 
+            href="#contact"
+            sx={{ '&:hover': { textDecoration: 'underline' } }}
+          >
+            Contact
+          </Button>
+          <DarkModeToggle />
+        </Box>
+      </Toolbar>
+    </AppBar>
   )
 }

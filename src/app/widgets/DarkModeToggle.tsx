@@ -1,26 +1,32 @@
 'use client';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import { IconButton, Tooltip } from '@mui/material';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 export default function DarkModeToggle() {
-    const { theme, setTheme } = useTheme();
+    const { theme, setTheme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     
     // Wait until mounted to avoid hydration mismatch
     useEffect(() => {
         setMounted(true);
     }, []);
-    
-    if (!mounted) {
-        return <button className="px-4 py-2 rounded bg-gray-300 text-black">Theme</button>;
-    }
+
+    // Always render the same structure to avoid hydration mismatch
+    const currentTheme = mounted ? (resolvedTheme || theme) : 'light';
+    const isDark = currentTheme === 'dark';
 
     return (
-        <button 
-            className="px-4 py-2 rounded bg-gray-300 dark:bg-gray-700 text-black dark:text-white" 
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        >
-            Toggle {theme === 'dark' ? 'Light' : 'Dark'} Mode
-        </button>
+        <Tooltip title={mounted ? `Switch to ${isDark ? 'light' : 'dark'} mode` : 'Toggle theme'}>
+            <IconButton 
+                color="inherit"
+                onClick={() => mounted && setTheme(isDark ? 'light' : 'dark')}
+                disabled={!mounted}
+            >
+                {isDark ? <DarkModeIcon /> : <LightModeIcon />}
+            </IconButton>
+        </Tooltip>
     );
 }

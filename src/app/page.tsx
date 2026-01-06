@@ -1,20 +1,24 @@
+'use client'
+
 import Header from './components/Header'
 import About from './components/About'
+import Experience from './components/Experience'
+import OpenSource from './components/OpenSource'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import { Container, Box } from '@mui/material'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <Box sx={{ minHeight: '100vh', backgroundColor: 'background.default' }}>
       <Header />
-      <main className="container mx-auto px-4 py-8">
+      <Container maxWidth="lg" sx={{ py: 4 }}>
         <About />
+        <Experience />
+        <OpenSource />
         <Projects />
         <Contact />
-      </main>
-      {/* <footer className="text-center py-4">
-        <p>&copy; {new Date().getFullYear()} Nick Deupree</p>
-      </footer> */}
-    </div>
+      </Container>
+    </Box>
   )
 }

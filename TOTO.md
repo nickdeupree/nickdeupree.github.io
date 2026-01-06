@@ -7,7 +7,7 @@ Here's your portfolio improvement plan formatted in clean, structured **Markdown
 ## 🔧 Functionality Upgrades
 
 * **Dark/Light Theme Toggle**
-  Simple, modern addition that improves accessibility and personalization.
+  Simple, modern addition that improves accessibility and personalization. CHECK!!!
 
 * **Project Filtering or Tag System**
   Allow users to filter by:

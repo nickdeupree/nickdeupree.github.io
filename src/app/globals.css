@@ -48,4 +48,9 @@ body {
     --color-text: 243 244 246; /* gray-100 in RGB */
     --color-text-muted: 209 213 219; /* gray-300 in RGB */
   }
+
+/* Offset anchor targets so fixed/sticky header doesn't cover section titles */
+section[id] {
+  scroll-margin-top: 80px;
+}
 }

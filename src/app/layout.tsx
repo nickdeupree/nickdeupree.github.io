@@ -1,22 +1,12 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
-import localFont from "next/font/local";
-import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import ThemeProvider from './components/ThemeProvider';
+import Header from './components/Header';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Nick Deupree | Portfolio",
-  description: "Nick Deupree's portfolio showcasing projects and skills.",
+  title: 'Nick Deupree - Portfolio',
+  description: 'Full-stack developer portfolio',
 };
 
 export default function RootLayout({
@@ -25,13 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider attribute="class">
-          {children}
-        </ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <AppRouterCacheProvider>
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
