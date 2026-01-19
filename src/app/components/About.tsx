@@ -32,7 +32,7 @@ export default function About() {
               LinkedIn
             </Link>
             {' '}&amp;{' '}
-            <Link href="https://github.com/nicholasdeupree/" style={{ color: '#1976d2', textDecoration: 'none' }}>
+            <Link href="https://github.com/nickdeupree/" style={{ color: '#1976d2', textDecoration: 'none' }}>
               GitHub
             </Link>
           </Typography>
