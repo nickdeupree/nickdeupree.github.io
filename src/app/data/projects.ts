@@ -1,5 +1,13 @@
 export const projects = [
     {
+      title: "Lexicon",
+      github: "https://github.com/nickdeupree/lexicon",
+      link: "https://nickdeupree.github.io/lexicon",
+      description: "Lexicon is a modern web application that enhances your reading experience through Rapid Serial Visual Presentation (RSVP) for speed reading and natural text-to-speech capabilities. Built with React 19, TypeScript, and Tailwind CSS, it offers a fully responsive PWA with adjustable reading speeds, multiple voice options, and an accessible dark mode interface.",
+      image: "/Lexicon.png",
+      difficulty: 2
+    },
+    {
       title: "Conversational Reply Generator",
       github: "https://github.com/nickdeupree/OnlyBots",
       link: "https://only-bots.vercel.app/",

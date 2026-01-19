@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Card, CardContent, Typography, Box, Button, Stack, Rating } from '@mui/material'
+import { Card, CardContent, Typography, Box, Button, Stack, Rating, Tooltip } from '@mui/material'
 
 interface ProjectProps {
   title: string;
@@ -14,9 +14,9 @@ interface ProjectProps {
 
 export default function Project({ title, github, link, download, description, image, difficulty }: ProjectProps) {
   return (
-    <Card 
-      sx={{ 
-        display: 'flex', 
+    <Card
+      sx={{
+        display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
         transition: 'all 0.3s ease',
         '&:hover': {
@@ -30,16 +30,20 @@ export default function Project({ title, github, link, download, description, im
             {title}
           </Typography>
         </Link>
-        <Box>
-          <Rating value={difficulty} readOnly max={5} size="small" />
+        <Box sx={{ mb: 1 }}>
+          <Tooltip title={`${difficulty}/5 difficulty`} arrow placement="right">
+            <Box sx={{ display: 'inline-flex' }}>
+              <Rating value={difficulty} readOnly max={5} size="small" />
+            </Box>
+          </Tooltip>
         </Box>
         <Stack direction="row" spacing={1} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
           {link && (
-            <Button 
-              size="small" 
-              component={Link} 
-              href={link} 
-              target="_blank" 
+            <Button
+              size="small"
+              component={Link}
+              href={link}
+              target="_blank"
               rel="noopener noreferrer"
               sx={{ textTransform: 'none' }}
             >
@@ -47,22 +51,22 @@ export default function Project({ title, github, link, download, description, im
             </Button>
           )}
           {download && (
-            <Button 
-              size="small" 
-              component={Link} 
-              href={download} 
-              target="_blank" 
+            <Button
+              size="small"
+              component={Link}
+              href={download}
+              target="_blank"
               rel="noopener noreferrer"
               sx={{ textTransform: 'none' }}
             >
               Download
             </Button>
           )}
-          <Button 
-            size="small" 
-            component={Link} 
-            href={github} 
-            target="_blank" 
+          <Button
+            size="small"
+            component={Link}
+            href={github}
+            target="_blank"
             rel="noopener noreferrer"
             sx={{ textTransform: 'none' }}
           >
