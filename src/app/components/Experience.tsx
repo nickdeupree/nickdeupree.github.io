@@ -28,11 +28,10 @@ export default function Experience() {
               {index < experiences.length - 1 && <TimelineConnector />}
             </TimelineSeparator>
             <TimelineContent sx={{ py: 3 }}>
-              <Card sx={{ boxShadow: 3 }}>
+              <Card sx={{ boxShadow: 3, transition: 'transform 200ms ease, box-shadow 200ms ease', transformOrigin: 'center center', '&:hover': { transform: 'scale(1.01)', boxShadow: 6 } }}>
                 <CardContent>
                   <Typography variant="h6" component="h3" sx={{ fontWeight: 'bold', mb: 0.5 }}>
-                    {exp.title}
-                  </Typography>
+                    {exp.title}</Typography>
                   <Typography variant="subtitle1" sx={{ color: 'primary.main', mb: 2 }}>
                     {exp.company}
                   </Typography>
