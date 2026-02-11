@@ -4,6 +4,7 @@ export const openSourceProjects = [
     github: "https://github.com/nickdeupree/lyric-fetch-mcp",
     link: "https://pypi.org/project/lyric-fetch-mcp/",
     description: "Lyric-Fetch-MCP is a Model Context Protocol (MCP) server that extends LLM capabilities with real-time music data. Leveraging the Genius API, it provides a seamless interface for AI agents to retrieve full song lyrics, detailed tracklists, and artist discography directly into the chat context.",
+    difficulty: 2
   },
   {
     title: "Expo-alarm-kit",
