@@ -1,4 +1,13 @@
 export const projects = [
+  {
+    title: "Prompt Vault",
+    github: "https://github.com/nickdeupree/promptvault",
+    link: "https://addons.mozilla.org/en-US/firefox/addon/prompt-vault/",
+    description: "Prompt Vault is a Firefox extension that allows users to save and manage their favorite AI prompts directly in the browser. With a simple interface, users can quickly access their prompt library while browsing & inject prompts straight into their LLM chat interface. Built with JavaScript, it provides a seamless way to organize and utilize prompts for enhanced AI interactions.",
+    image: "/PromptVault.png",
+    difficulty: 2,
+    skills: ["JavaScript"]
+  },
     {
       title: "LLM Dictionary",
       github: "https://github.com/nickdeupree/llmdict",

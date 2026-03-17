@@ -1,37 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+                                                                                                                                                                                                                                                                                                                                    # Nick de Upree’s Portfolio
 
-## Getting Started
+This repository powers the static portfolio website for **Nick de Upree**. It's built using [Next.js](https://nextjs.org) with the App Router and TypeScript, styled with Tailwind CSS, and deployed to GitHub Pages.
 
-First, run the development server:
+The site showcases Nick's experience, open-source contributions, projects, skills, and provides contact information. All data lives under `src/app/data` and is rendered via components in `src/app/components`.
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js 14+](https://nextjs.org/) (App Router)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- GitHub Pages for deployment
+- React 18
+
+---
+
+## 🚀 Development
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nickdeupree/nickdeupree.github.io.git
+   cd nickdeupree.github.io
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser. Changes are hot‑reloaded.
+
+### 📁 Key directories
+
+- `src/app/` – application routes and layouts
+- `src/app/components/` – reusable UI pieces (Header, Projects, Experience, etc.)
+- `src/app/data/` – TypeScript files containing your portfolio data
+- `public/` – static assets (images, icons)
+
+---
+
+## 📦 Deployment
+
+A `deploy` script builds the site and pushes the output to the `gh-pages` branch:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run deploy
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Configure GitHub Pages to serve from `gh-pages` in your repository settings.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Customization
 
-## Learn More
+- Edit `src/app/data/*` to update experience, projects, skills, etc.
+- Tailwind utility classes drive styling—modify `tailwind.config.ts` or add classes directly.
+- Fonts are configured in `src/app/fonts` and loaded via the layout.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This is a personal site; contributions are not expected. Feel free to fork, experiment, or open issues if you adapt this template.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📫 Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# nickdeupree.github.io
+Use the contact form on the site or connect on [GitHub](https://github.com/nickdeupree).
+
