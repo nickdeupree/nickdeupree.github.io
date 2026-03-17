@@ -41,7 +41,7 @@ export default function About() {
               variant="contained"
               startIcon={<DownloadIcon />}
               component="a"
-              href="/Nicholas Deupree Resume.pdf"
+              href="/Nicholas_Deupree_resume.pdf"
               download
               sx={{ textTransform: 'none' }}
             >
