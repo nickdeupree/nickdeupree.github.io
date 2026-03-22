@@ -11,7 +11,7 @@ export const experiences: Experience[] = [
     title: "Lead Mobile Engineer",
     company: "Wake Digital",
     location: "Remote",
-    period: "Jun 2025 - Present",
+    period: "Jun 2025 - Feb 2026",
     responsibilities: [
       "Engineered a custom Swift-to-TypeScript bridge to implement Apple's AlarmKit, filling a critical gap in the Expo ecosystem where no existing library supported the new framework.",
       "Secured App Store approval by resolving strict data privacy requirements, implementing clear user permission flows to validate the necessity of sensitive background data access.",
