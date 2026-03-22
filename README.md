@@ -1,6 +1,6 @@
                                                                                                                                                                                                                                                                                                                                     # Nick de Upree’s Portfolio
 
-This repository powers the static portfolio website for **Nick de Upree**. It's built using [Next.js](https://nextjs.org) with the App Router and TypeScript, styled with Tailwind CSS, and deployed to GitHub Pages.
+This repository powers the static portfolio website for **Nick deupree**. It's built using [Next.js](https://nextjs.org) with the App Router and TypeScript, styled with Tailwind CSS, and deployed to GitHub Pages.
 
 The site showcases Nick's experience, open-source contributions, projects, skills, and provides contact information. All data lives under `src/app/data` and is rendered via components in `src/app/components`.
 
