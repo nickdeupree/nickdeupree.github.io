@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: "Primary Source Verification & Extraction Agent",
+    github: "https://github.com/nickdeupree/primary-source-verification-and-extraction-agent",
+    description: "The PSEV Agent is an autonomous ReAct system that utilizes Google Search as a discovery engine to identify authoritative URLs, bypassing secondary summaries to find primary data sources. It then deploys a Webcrawler to perform deep-text extraction from those specific sites, ensuring all generated insights are grounded in real-time, verifiable information rather than model training data. The agent responds with a summary of its findings & a link to the source.",
+    image: "/PSVEAgent.png",
+    difficulty: 4,
+    skills: ["TypeSCript", "Next.js", "LLM", "AI Agent Design"]
+  },
+  {
     title: "Prompt Vault",
     github: "https://github.com/nickdeupree/promptvault",
     link: "https://addons.mozilla.org/en-US/firefox/addon/prompt-vault/",
